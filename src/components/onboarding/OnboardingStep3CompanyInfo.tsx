@@ -2,15 +2,17 @@
 
 import type { Enquiry } from '@/domain/formation/decisionEngine/types'
 
+interface CompanyInfoData {
+  tradeNames: string[]
+  businessActivityDescription: string
+  officePreference: 'no_office' | 'flexi_desk' | 'dedicated_office' | 'warehouse'
+  visasRequired: number
+  visaRoles: string[]
+}
+
 interface OnboardingStep3CompanyInfoProps {
-  data: {
-    tradeNames: string[]
-    businessActivityDescription: string
-    officePreference: 'no_office' | 'flexi_desk' | 'dedicated_office' | 'warehouse'
-    visasRequired: number
-    visaRoles: string[]
-  }
-  updateData: (updates: Partial<typeof data>) => void
+  data: CompanyInfoData
+  updateData: (updates: Partial<CompanyInfoData>) => void
   enquiryData: Enquiry | null
 }
 

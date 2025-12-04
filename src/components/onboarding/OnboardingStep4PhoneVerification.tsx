@@ -8,7 +8,7 @@ interface OnboardingStep4PhoneVerificationProps {
     phoneVerified: boolean
     otpCode: string
   }
-  updateData: (updates: Partial<typeof data>) => void
+  updateData: (updates: Partial<{ otpCode: string; isVerified: boolean }>) => void
   phone: string
 }
 

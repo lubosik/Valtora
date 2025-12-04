@@ -8,7 +8,7 @@ interface OnboardingStep5DigitalSignatureProps {
     signatureName: string
     signatureDate: string
   }
-  updateData: (updates: Partial<typeof data>) => void
+  updateData: (updates: Partial<{ digitalSignatureName: string; agreedToTerms: boolean; agreedToServiceAgreement: boolean }>) => void
   onSubmit: () => void
 }
 
