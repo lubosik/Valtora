@@ -1,14 +1,16 @@
 'use client'
 
+interface DigitalSignatureData {
+  customerServiceAgreementSigned: boolean
+  kycFormSigned: boolean
+  powerOfAttorneySigned: boolean
+  signatureName: string
+  signatureDate: string
+}
+
 interface OnboardingStep5DigitalSignatureProps {
-  data: {
-    customerServiceAgreementSigned: boolean
-    kycFormSigned: boolean
-    powerOfAttorneySigned: boolean
-    signatureName: string
-    signatureDate: string
-  }
-  updateData: (updates: Partial<{ digitalSignatureName: string; agreedToTerms: boolean; agreedToServiceAgreement: boolean }>) => void
+  data: DigitalSignatureData
+  updateData: (updates: Partial<DigitalSignatureData>) => void
   onSubmit: () => void
 }
 
