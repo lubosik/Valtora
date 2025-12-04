@@ -62,7 +62,7 @@ function CheckoutForm({
         return
       }
 
-      const { error: confirmError, paymentIntent } = await stripe.confirmPayment({
+      const { error: confirmError, paymentIntent }: { error?: { message?: string }, paymentIntent?: any } = await stripe.confirmPayment({
         elements,
         clientSecret,
         confirmParams: {
