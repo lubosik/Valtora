@@ -53,7 +53,7 @@ export default function Analytics() {
         window.ttq.page()
       }
     }
-  }, [])
+  }, [gaId, metaPixelId, tiktokPixelId])
 
   return (
     <>
