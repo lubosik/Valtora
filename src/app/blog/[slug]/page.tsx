@@ -172,11 +172,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
   }
 
-  return generatePageMetadata({
-    title: `${post.title} | Valtora Blog`,
-    description: post.excerpt,
-    path: `/blog/${params.slug}`,
-  })
+  return generatePageMetadata(
+    `${post.title} | Valtora Blog`,
+    post.excerpt,
+    `/blog/${params.slug}`
+  )
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
