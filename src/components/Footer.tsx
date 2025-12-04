@@ -32,6 +32,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="hover:text-emirati-gold transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/faq" className="hover:text-emirati-gold transition-colors">
                   FAQ
                 </Link>

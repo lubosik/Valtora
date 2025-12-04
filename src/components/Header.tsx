@@ -9,7 +9,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-valtora-navy text-pearl-white sticky top-0 z-50 shadow-lg">
+    <header className="bg-pearl-white text-valtora-navy sticky top-0 z-50 shadow-lg border-b border-gray-200">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <ValtoraLogo width={160} height={50} />
         
@@ -17,25 +17,31 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
           <Link 
             href="/" 
-            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base"
+            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base text-valtora-navy"
           >
             Home
           </Link>
           <Link 
             href="/quote" 
-            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base"
+            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base text-valtora-navy"
           >
             Get Quote
           </Link>
           <Link 
+            href="/blog" 
+            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base text-valtora-navy"
+          >
+            Blog
+          </Link>
+          <Link 
             href="/faq" 
-            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base"
+            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base text-valtora-navy"
           >
             FAQ
           </Link>
           <Link 
             href="/about" 
-            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base"
+            className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base text-valtora-navy"
           >
             About
           </Link>
@@ -51,7 +57,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-pearl-white hover:text-emirati-gold transition-colors p-2"
+          className="md:hidden text-valtora-navy hover:text-emirati-gold transition-colors p-2"
           aria-label="Menu"
           aria-expanded={mobileMenuOpen}
         >
@@ -85,33 +91,40 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-gray-700 bg-valtora-navy">
+        <div className="md:hidden border-t border-gray-200 bg-pearl-white">
           <div className="container mx-auto px-4 py-4 space-y-3">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 hover:text-emirati-gold transition-colors font-medium"
+              className="block py-2 hover:text-emirati-gold transition-colors font-medium text-valtora-navy"
             >
               Home
             </Link>
             <Link
               href="/quote"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 hover:text-emirati-gold transition-colors font-medium"
+              className="block py-2 hover:text-emirati-gold transition-colors font-medium text-valtora-navy"
             >
               Get Quote
             </Link>
             <Link
+              href="/blog"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 hover:text-emirati-gold transition-colors font-medium text-valtora-navy"
+            >
+              Blog
+            </Link>
+            <Link
               href="/faq"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 hover:text-emirati-gold transition-colors font-medium"
+              className="block py-2 hover:text-emirati-gold transition-colors font-medium text-valtora-navy"
             >
               FAQ
             </Link>
             <Link
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 hover:text-emirati-gold transition-colors font-medium"
+              className="block py-2 hover:text-emirati-gold transition-colors font-medium text-valtora-navy"
             >
               About
             </Link>
