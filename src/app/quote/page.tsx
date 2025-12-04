@@ -1,11 +1,14 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import type { DecisionResult, AuthorityQuote } from '@/domain/formation/decisionEngine/types'
 
-export default function QuotePage() {
+// Force dynamic rendering - this page uses sessionStorage and searchParams
+export const dynamic = 'force-dynamic'
+
+function QuotePageContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [decisionResult, setDecisionResult] = useState<DecisionResult | null>(null)
@@ -346,6 +349,21 @@ export default function QuotePage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function QuotePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-4 border-emirati-gold border-t-transparent mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading your quote...</p>
+        </div>
+      </div>
+    }>
+      <QuotePageContent />
+    </Suspense>
   )
 }
 
