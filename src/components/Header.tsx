@@ -10,11 +10,13 @@ export default function Header() {
 
   return (
     <header className="bg-pearl-white text-valtora-navy sticky top-0 z-50 shadow-lg border-b border-gray-200">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <ValtoraLogo width={160} height={50} />
+      <nav className="container mx-auto px-4 py-4 flex items-center justify-between min-h-[80px]">
+        <div className="flex items-center">
+          <ValtoraLogo width={160} height={50} />
+        </div>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8 h-full">
           <Link 
             href="/" 
             className="hover:text-emirati-gold transition-colors font-medium text-sm lg:text-base text-valtora-navy"

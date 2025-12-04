@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 
 interface BlogPost {
   id: string
+  slug: string
   title: string
   content: string
   excerpt: string
@@ -17,8 +18,9 @@ interface BlogPost {
 }
 
 const blogPosts: Record<string, BlogPost> = {
-  '1': {
+  'dubai-free-zone-company-formation-guide-2025': {
     id: '1',
+    slug: 'dubai-free-zone-company-formation-guide-2025',
     title: 'Complete Guide to Dubai Free Zone Company Formation in 2025',
     excerpt: 'Everything you need to know about setting up a company in Dubai\'s free zones, including costs, requirements, and the best zones for your business type.',
     content: `
@@ -51,8 +53,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '8 min read',
     author: 'Valtora Team',
   },
-  '2': {
+  'dubai-mainland-vs-free-zone-comparison-which-right-business': {
     id: '2',
+    slug: 'dubai-mainland-vs-free-zone-comparison-which-right-business',
     title: 'Dubai Mainland vs Free Zone: Which is Right for Your Business?',
     excerpt: 'A comprehensive comparison of Dubai mainland and free zone company setup, including pros, cons, and key differences to help you make the right choice.',
     content: `
@@ -74,8 +77,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '10 min read',
     author: 'Valtora Team',
   },
-  '3': {
+  'uae-golden-visa-company-formation-qualify-residency': {
     id: '3',
+    slug: 'uae-golden-visa-company-formation-qualify-residency',
     title: 'UAE Golden Visa: How Company Formation Can Help You Qualify',
     excerpt: 'Learn how setting up a company in Dubai can help you qualify for the UAE Golden Visa, offering long-term residency and business opportunities.',
     content: `<h2>Introduction to UAE Golden Visa</h2><p>The UAE Golden Visa is a long-term residency program that offers entrepreneurs and investors extended stay in the country. Setting up a company in Dubai can be a pathway to qualifying for this prestigious visa.</p><h2>Benefits of Golden Visa</h2><p>The Golden Visa offers 5-10 year residency permits, allowing you to live, work, and study in the UAE without a sponsor. It also provides access to world-class healthcare and education facilities.</p><h2>How Company Formation Helps</h2><p>Establishing a business in Dubai with a minimum investment can qualify you for the Golden Visa. The requirements vary based on your business type and investment amount.</p>`,
@@ -85,8 +89,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '6 min read',
     author: 'Valtora Team',
   },
-  '4': {
+  'top-5-dubai-free-zones-ecommerce-businesses-2025': {
     id: '4',
+    slug: 'top-5-dubai-free-zones-ecommerce-businesses-2025',
     title: 'Top 5 Dubai Free Zones for E-commerce Businesses in 2025',
     excerpt: 'Discover the best free zones in Dubai for e-commerce businesses, including setup costs, benefits, and which zone offers the best value for online retailers.',
     content: `<h2>E-commerce in Dubai</h2><p>Dubai's strategic location and excellent logistics infrastructure make it an ideal base for e-commerce businesses serving the Middle East, Africa, and Asia.</p><h2>Top Free Zones for E-commerce</h2><p>SPC, IFZA, and DMCC are among the most popular choices for e-commerce businesses, offering competitive pricing and flexible office solutions.</p>`,
@@ -96,8 +101,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '7 min read',
     author: 'Valtora Team',
   },
-  '5': {
+  'dubai-company-formation-costs-breakdown-2025-pricing': {
     id: '5',
+    slug: 'dubai-company-formation-costs-breakdown-2025-pricing',
     title: 'Dubai Company Formation Costs: Complete Breakdown for 2025',
     excerpt: 'Get a detailed breakdown of all costs involved in setting up a company in Dubai, including hidden fees, government charges, and ongoing expenses.',
     content: `<h2>Understanding Total Costs</h2><p>When budgeting for your Dubai company formation, it's essential to understand all costs involved, not just the initial setup fee.</p><h2>Initial Setup Costs</h2><p>These include trade license fees, registration charges, and professional service fees. Costs vary significantly between free zones and mainland.</p><h2>Ongoing Costs</h2><p>Annual license renewals, office rent, visa processing, and other recurring expenses should be factored into your budget.</p>`,
@@ -107,8 +113,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '9 min read',
     author: 'Valtora Team',
   },
-  '6': {
+  'how-open-business-bank-account-dubai-step-by-step-guide': {
     id: '6',
+    slug: 'how-open-business-bank-account-dubai-step-by-step-guide',
     title: 'How to Open a Business Bank Account in Dubai: Step-by-Step Guide',
     excerpt: 'A practical guide to opening a business bank account in Dubai, including required documents, best banks, and common challenges to avoid.',
     content: `<h2>Banking in Dubai</h2><p>Opening a business bank account in Dubai can be challenging, but with the right preparation and documentation, the process can be streamlined.</p><h2>Required Documents</h2><p>Banks typically require trade license, company registration documents, shareholder passports, proof of address, and business plan.</p>`,
@@ -118,8 +125,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '8 min read',
     author: 'Valtora Team',
   },
-  '7': {
+  'dubai-tax-benefits-entrepreneurs-choose-uae-company-setup': {
     id: '7',
+    slug: 'dubai-tax-benefits-entrepreneurs-choose-uae-company-setup',
     title: 'Dubai Tax Benefits: Why Entrepreneurs Choose the UAE',
     excerpt: 'Explore the tax advantages of setting up a company in Dubai, including zero corporate tax, personal income tax benefits, and double taxation treaties.',
     content: `<h2>Tax Advantages</h2><p>Dubai offers one of the most attractive tax environments globally, with zero corporate and personal income tax in most free zones.</p><h2>Double Taxation Treaties</h2><p>The UAE has signed numerous double taxation treaties, helping businesses avoid paying tax twice on the same income.</p>`,
@@ -129,8 +137,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '7 min read',
     author: 'Valtora Team',
   },
-  '8': {
+  'spc-free-zone-dubai-everything-need-know-setup-costs': {
     id: '8',
+    slug: 'spc-free-zone-dubai-everything-need-know-setup-costs',
     title: 'SPC Free Zone: Everything You Need to Know',
     excerpt: 'An in-depth look at SPC Free Zone, one of Dubai\'s most cost-effective free zones, including setup process, costs, and business activities allowed.',
     content: `<h2>About SPC Free Zone</h2><p>SPC Free Zone is one of Dubai's most affordable free zones, making it ideal for startups and small businesses.</p><h2>Key Features</h2><p>SPC offers competitive pricing, flexible office solutions, and supports a wide range of business activities.</p>`,
@@ -140,8 +149,9 @@ const blogPosts: Record<string, BlogPost> = {
     readTime: '6 min read',
     author: 'Valtora Team',
   },
-  '9': {
+  'dubai-company-formation-tech-startups-complete-guide': {
     id: '9',
+    slug: 'dubai-company-formation-tech-startups-complete-guide',
     title: 'Dubai Company Formation for Tech Startups: Complete Guide',
     excerpt: 'Special considerations for tech startups setting up in Dubai, including free zone recommendations, visa options, and funding opportunities.',
     content: `<h2>Tech Startups in Dubai</h2><p>Dubai has become a hub for tech startups, offering excellent infrastructure, access to talent, and government support programs.</p><h2>Best Free Zones for Tech</h2><p>Free zones like DIFC, DMCC, and IFZA are popular among tech startups due to their modern infrastructure and business-friendly policies.</p>`,
@@ -153,8 +163,8 @@ const blogPosts: Record<string, BlogPost> = {
   },
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const post = blogPosts[params.id]
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = blogPosts[params.slug]
   if (!post) {
     return generatePageMetadata({
       title: 'Blog Post Not Found | Valtora',
@@ -166,12 +176,12 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   return generatePageMetadata({
     title: `${post.title} | Valtora Blog`,
     description: post.excerpt,
-    path: `/blog/${params.id}`,
+    path: `/blog/${params.slug}`,
   })
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = blogPosts[params.id]
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = blogPosts[params.slug]
 
   if (!post) {
     notFound()
@@ -275,4 +285,3 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
     </div>
   )
 }
-
