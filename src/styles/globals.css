@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Valtora Brand Colors - CSS Variables */
+  --color-valtora-navy: #0A1A2F;
+  --color-emirati-gold: #D4AF37;
+  --color-emirati-gold-hover: #C19A33;
+  --color-desert-sand: #E8DCC8;
+  --color-pearl-white: #FAFAF7;
+  --color-carbon-black: #111111;
+  --color-oasis-blue: #1C8CAD;
+  --color-date-palm-green: #0C3F2E;
+}
+
+@layer base {
+  body {
+    @apply bg-pearl-white text-carbon-black font-sans antialiased;
+    @apply text-base leading-relaxed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1 {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+  }
+  
+  h2 {
+    @apply font-serif text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+  }
+  
+  h3 {
+    @apply font-serif text-2xl md:text-3xl font-semibold leading-snug;
+  }
+  
+  h4 {
+    @apply font-serif text-xl md:text-2xl font-semibold;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+  
+  /* Improve touch targets on mobile */
+  button, a {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-emirati-gold;
+  }
+}
+
+@layer components {
+  /* Primary CTA Button - Emirati Gold */
+  .btn-primary {
+    @apply bg-emirati-gold text-carbon-black font-sans font-semibold px-6 py-3.5 rounded-button shadow-button;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-emirati-gold-hover hover:shadow-button-hover hover:-translate-y-0.5;
+    @apply active:translate-y-0 active:shadow-button;
+    @apply focus:outline-none focus:ring-2 focus:ring-emirati-gold focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0;
+  }
+  
+  /* Secondary CTA Button - Royal Navy */
+  .btn-secondary {
+    @apply bg-valtora-navy text-pearl-white font-sans font-semibold px-6 py-3.5 rounded-button;
+    @apply border border-emirati-gold;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-opacity-95 hover:shadow-button-hover hover:-translate-y-0.5;
+    @apply active:translate-y-0 active:shadow-button;
+    @apply focus:outline-none focus:ring-2 focus:ring-emirati-gold focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0;
+  }
+  
+  /* Link style */
+  .link-primary {
+    @apply text-oasis-blue underline-offset-4;
+    @apply hover:text-valtora-navy hover:underline;
+    @apply transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-oasis-blue focus:ring-offset-2 rounded;
+  }
+  
+  /* Container with max-width and padding */
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Section spacing */
+  .section-spacing {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+  
+  /* Card style */
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 md:p-8 border border-gray-200;
+    @apply transition-shadow duration-300;
+    @apply hover:shadow-xl;
+  }
+  
+  /* Input style */
+  .input-primary {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg;
+    @apply focus:ring-2 focus:ring-emirati-gold focus:border-emirati-gold outline-none;
+    @apply transition-all duration-200;
+    @apply disabled:bg-gray-100 disabled:cursor-not-allowed;
+  }
+  
+  /* Text balance for better readability */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+

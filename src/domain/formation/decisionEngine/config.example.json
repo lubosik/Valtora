@@ -1,0 +1,86 @@
+{
+  "note": "This is an example structure showing how pricing data could be organized in a spreadsheet format. The actual implementation currently uses in-memory data in authorities.ts, but this structure can be used as a reference for migrating to Google Sheets, Airtable, or CSV.",
+  "authorities": [
+    {
+      "authority_id": "spc",
+      "authority_name": "Sharjah Publishing City Free Zone (SPC)",
+      "type": "freezone",
+      "base_cost": 8500,
+      "avg_setup_days": 7,
+      "ecosystem_score": 6,
+      "networking_score": 5,
+      "growth_score": 7,
+      "bank_account_ease_score": 7,
+      "min_office_type": "none",
+      "max_visas_default": 5,
+      "allowed_roles": "investor,director,manager,sales,technician,employee,dependent",
+      "restricted_nationalities": "",
+      "supports_categories": "service,consultancy,trading,ecommerce,tech,media",
+      "flags_commodities_only": false,
+      "flags_crypto_friendly": false,
+      "flags_industrial_zone": false,
+      "flags_financial_centre": false
+    }
+  ],
+  "visa_pricing": [
+    {
+      "authority_id": "spc",
+      "visa_role": "investor",
+      "base_visa_cost": 4000,
+      "additional_cost_for_high_risk_nationality": 1000,
+      "medical_cost": 500,
+      "eid_cost": 300,
+      "express_visa_surcharge": 1000
+    }
+  ],
+  "office_pricing": [
+    {
+      "authority_id": "spc",
+      "office_type": "none",
+      "annual_rent_estimate": 0,
+      "included_visas_quota": 0,
+      "extra_visa_cost_per_quota": 0
+    },
+    {
+      "authority_id": "spc",
+      "office_type": "flexi",
+      "annual_rent_estimate": 5000,
+      "included_visas_quota": 1,
+      "extra_visa_cost_per_quota": 0
+    }
+  ],
+  "add_ons": [
+    {
+      "add_on_id": "corporate_tax_registration",
+      "label": "UAE Corporate Tax Registration",
+      "description": "Assistance with corporate tax registration",
+      "price_aed": 2000,
+      "is_recurring": false,
+      "is_recommended_by_default": false
+    },
+    {
+      "add_on_id": "accounting_starter",
+      "label": "Accounting Package - Starter",
+      "description": "Basic accounting services for first year",
+      "price_aed": 5000,
+      "is_recurring": true,
+      "is_recommended_by_default": false
+    }
+  ],
+  "express_fees": [
+    {
+      "authority_id": "spc",
+      "express_fee_aed": 3000,
+      "express_days_reduction": 3
+    }
+  ],
+  "nationality_rules": [
+    {
+      "nationality_iso_code": "XX",
+      "restricted_authorities": "",
+      "extra_timeline_days": 3,
+      "visa_cost_multiplier": 1.2
+    }
+  ]
+}
+

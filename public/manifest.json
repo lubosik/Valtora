@@ -1,0 +1,22 @@
+{
+  "name": "Valtora Company Formations",
+  "short_name": "Valtora",
+  "description": "Expert Dubai company formation services with transparent pricing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1A2F",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/valtora-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/valtora-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
