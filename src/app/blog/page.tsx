@@ -3,11 +3,11 @@ import Image from 'next/image'
 import { generatePageMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = generatePageMetadata({
-  title: 'Blog - Dubai Company Formation Insights | Valtora',
-  description: 'Expert insights, guides, and updates about Dubai company formation, UAE business setup, visas, and free zone regulations.',
-  path: '/blog',
-})
+export const metadata: Metadata = generatePageMetadata(
+  'Blog - Dubai Company Formation Insights | Valtora',
+  'Expert insights, guides, and updates about Dubai company formation, UAE business setup, visas, and free zone regulations.',
+  '/blog'
+)
 
 interface BlogPost {
   id: string
