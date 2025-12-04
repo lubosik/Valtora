@@ -2,14 +2,16 @@
 
 import { useRef, useState } from 'react'
 
+interface DocumentsData {
+  passportFile: File | null
+  uaeEntryStampFile: File | null
+  passportPhotoFile: File | null
+  proofOfAddressFile: File | null
+}
+
 interface OnboardingStep2DocumentsProps {
-  data: {
-    passportFile: File | null
-    uaeEntryStampFile: File | null
-    passportPhotoFile: File | null
-    proofOfAddressFile: File | null
-  }
-  updateData: (updates: Partial<typeof data>) => void
+  data: DocumentsData
+  updateData: (updates: Partial<DocumentsData>) => void
 }
 
 interface FileUploadProps {
