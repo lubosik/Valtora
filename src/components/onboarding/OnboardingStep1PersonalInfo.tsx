@@ -2,16 +2,18 @@
 
 import type { Enquiry } from '@/domain/formation/decisionEngine/types'
 
+interface PersonalInfoData {
+  fullName: string
+  phone: string
+  email: string
+  nationality: string
+  currentCountry: string
+  dateOfBirth: string
+}
+
 interface OnboardingStep1PersonalInfoProps {
-  data: {
-    fullName: string
-    phone: string
-    email: string
-    nationality: string
-    currentCountry: string
-    dateOfBirth: string
-  }
-  updateData: (updates: Partial<typeof data>) => void
+  data: PersonalInfoData
+  updateData: (updates: Partial<PersonalInfoData>) => void
   enquiryData: Enquiry | null
 }
 
