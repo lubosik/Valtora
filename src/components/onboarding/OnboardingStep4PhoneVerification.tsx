@@ -2,13 +2,15 @@
 
 import { useState } from 'react'
 
+interface PhoneVerificationData {
+  phone: string
+  phoneVerified: boolean
+  otpCode: string
+}
+
 interface OnboardingStep4PhoneVerificationProps {
-  data: {
-    phone: string
-    phoneVerified: boolean
-    otpCode: string
-  }
-  updateData: (updates: Partial<{ otpCode: string; isVerified: boolean }>) => void
+  data: PhoneVerificationData
+  updateData: (updates: Partial<PhoneVerificationData>) => void
   phone: string
 }
 
