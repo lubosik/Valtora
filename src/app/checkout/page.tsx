@@ -62,14 +62,16 @@ function CheckoutForm({
         return
       }
 
-      const { error: confirmError, paymentIntent }: { error?: { message?: string }, paymentIntent?: any } = await stripe.confirmPayment({
+      const result = await stripe.confirmPayment({
         elements,
         clientSecret,
         confirmParams: {
-          return_url: `${window.location.origin}/onboarding?payment_intent=${paymentIntent?.id}&enquiry_id=${encodeURIComponent(enquiryId)}`,
+          return_url: `${window.location.origin}/onboarding?enquiry_id=${encodeURIComponent(enquiryId)}`,
         },
         redirect: 'if_required',
       })
+      
+      const { error: confirmError, paymentIntent } = result
 
       if (confirmError) {
         setError(confirmError.message || 'Payment failed')
