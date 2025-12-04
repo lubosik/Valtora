@@ -88,7 +88,7 @@ export default function OnboardingStep6Success({ enquiryId }: OnboardingStep6Suc
             </li>
             <li className="flex items-start gap-2">
               <span className="text-emirati-gold mt-0.5">•</span>
-              <span>We'll contact you if any additional information is needed</span>
+              <span>We&apos;ll contact you if any additional information is needed</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-emirati-gold mt-0.5">•</span>
@@ -96,7 +96,7 @@ export default function OnboardingStep6Success({ enquiryId }: OnboardingStep6Suc
             </li>
             <li className="flex items-start gap-2">
               <span className="text-emirati-gold mt-0.5">•</span>
-              <span>You'll receive regular updates on your application status</span>
+              <span>You&apos;ll receive regular updates on your application status</span>
             </li>
           </ul>
         </div>

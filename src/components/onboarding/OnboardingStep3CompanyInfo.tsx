@@ -39,7 +39,7 @@ export default function OnboardingStep3CompanyInfo({
             Proposed Trade Names (in priority order) <span className="text-red-500">*</span>
           </label>
           <p className="text-xs text-gray-500 mb-3">
-            Provide up to 3 company name options. We'll check availability and reserve your preferred available name.
+            Provide up to 3 company name options. We&apos;ll check availability and reserve your preferred available name.
           </p>
           <div className="space-y-3">
             {[0, 1, 2].map((index) => (

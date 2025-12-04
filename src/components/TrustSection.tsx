@@ -70,7 +70,7 @@ export default function TrustSection() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "Valtora made the entire process seamless. Clear pricing, expert guidance, and my company was set up faster than expected."
+                &quot;Valtora made the entire process seamless. Clear pricing, expert guidance, and my company was set up faster than expected.&quot;
               </p>
             </div>
 
@@ -85,7 +85,7 @@ export default function TrustSection() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "The calculator gave me instant clarity on costs. The team was responsive and handled everything professionally."
+                &quot;The calculator gave me instant clarity on costs. The team was responsive and handled everything professionally.&quot;
               </p>
             </div>
           </div>

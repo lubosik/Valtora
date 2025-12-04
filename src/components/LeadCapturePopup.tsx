@@ -114,7 +114,7 @@ export default function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed">
               Get a free consultation call with our Dubai company formation specialists. 
-              We'll answer your questions and help you choose the best option for your business.
+              We&apos;ll answer your questions and help you choose the best option for your business.
             </p>
 
             {isSubmitted ? (
@@ -126,7 +126,7 @@ export default function LeadCapturePopup({ onClose }: LeadCapturePopupProps) {
                 </div>
                 <h3 className="font-serif text-2xl text-valtora-navy mb-2">Thank You!</h3>
                 <p className="text-gray-700">
-                  We'll call you shortly to discuss your business setup needs.
+                  We&apos;ll call you shortly to discuss your business setup needs.
                 </p>
               </div>
             ) : (

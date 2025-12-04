@@ -43,7 +43,7 @@ export default function OnboardingStep5DigitalSignature({
                 Customer Service Agreement <span className="text-red-500">*</span>
               </label>
               <p className="text-sm text-gray-600 mt-1">
-                I agree to the terms and conditions of Valtora's customer service agreement, including service fees, timelines, and responsibilities.
+                I agree to the terms and conditions of Valtora&apos;s customer service agreement, including service fees, timelines, and responsibilities.
               </p>
               <a
                 href="/legal/terms"

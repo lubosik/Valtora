@@ -86,7 +86,7 @@ export default function CalculatorStep6Review({ enquiry }: CalculatorStep6Review
     <div>
       <h3 className="font-serif text-2xl text-valtora-navy mb-2">Review Your Information</h3>
       <p className="text-gray-600 mb-6">
-        Please review all the information below. Click "Get My Quote" to generate your personalized quote.
+        Please review all the information below. Click &quot;Get My Quote&quot; to generate your personalized quote.
       </p>
 
       <div className="space-y-6">
@@ -183,7 +183,7 @@ export default function CalculatorStep6Review({ enquiry }: CalculatorStep6Review
 
       <div className="mt-6 p-4 bg-emirati-gold/10 border border-emirati-gold/30 rounded-lg">
         <p className="text-sm text-gray-700">
-          <strong>Ready to get your quote?</strong> Click "Get My Quote" below to see your personalized 
+          <strong>Ready to get your quote?</strong> Click &quot;Get My Quote&quot; below to see your personalized 
           pricing breakdown and recommended authorities.
         </p>
       </div>
