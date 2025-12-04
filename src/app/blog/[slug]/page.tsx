@@ -166,11 +166,10 @@ const blogPosts: Record<string, BlogPost> = {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = blogPosts[params.slug]
   if (!post) {
-    return generatePageMetadata({
+    return {
       title: 'Blog Post Not Found | Valtora',
       description: 'The requested blog post could not be found.',
-      path: '/blog',
-    })
+    }
   }
 
   return generatePageMetadata({
