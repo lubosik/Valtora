@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import WhatsAppLink from './WhatsAppLink'
+import { getEnabledComplianceBadges } from '@/content/compliance'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -103,6 +104,15 @@ export default function Footer() {
                 </a>
               </div>
               <div>
+                <a
+                  href="mailto:customer@valtoraformations.com"
+                  className="hover:text-emirati-gold transition-colors"
+                  aria-label="Email us at customer@valtoraformations.com"
+                >
+                  customer@valtoraformations.com
+                </a>
+              </div>
+              <div>
                 <WhatsAppLink
                   href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
                   className="hover:text-emirati-gold transition-colors inline-flex items-center gap-2"
@@ -115,8 +125,38 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-400">
-          <p>© {currentYear} Valtora Company Formations. All rights reserved.</p>
+        {/* Compliance Badges */}
+        <div className="border-t border-gray-700 pt-6 sm:pt-8">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
+            {getEnabledComplianceBadges().map((badge, index) => (
+              <div
+                key={index}
+                className="group relative flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-full border border-gray-700 hover:border-emirati-gold/50 transition-all"
+                title={badge.tooltip || badge.description}
+              >
+                {badge.imageUrl ? (
+                  <img
+                    src={badge.imageUrl}
+                    alt={badge.label}
+                    className="h-5 w-auto"
+                  />
+                ) : (
+                  <span className="text-xs font-semibold text-emirati-gold tracking-wide">
+                    {badge.label}
+                  </span>
+                )}
+                {badge.tooltip && (
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-carbon-black text-pearl-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 border border-gray-600">
+                    {badge.tooltip}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 border-4 border-transparent border-t-carbon-black"></div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="text-center text-xs sm:text-sm text-gray-400">
+            <p>© {currentYear} Valtora Company Formations. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,77 @@
+keyword,intent_type,volume,cpc_estimate,difficulty,chosen_match_type,target_page,notes
+dubai company formation,transactional,2400,8.50,65,exact,/,Primary homepage keyword - high volume, high intent
+dubai company formation cost,commercial,1200,12.30,58,phrase,blog/dubai-company-formation-cost,High commercial intent - pricing focused
+dubai free zone,commercial,1800,9.20,62,exact,blog/dubai-free-zone-complete-guide,High volume, service-specific
+dubai free zone company formation,transactional,800,10.50,55,phrase,blog/dubai-free-zone-company-formation,Service-specific transactional keyword
+uae company setup,transactional,1600,7.80,60,exact,/,Alternative to Dubai-specific, broader reach
+dubai business license,commercial,1100,11.20,59,phrase,blog/dubai-business-license-guide,License-focused commercial intent
+dubai company registration,transactional,950,9.90,57,phrase,blog/dubai-company-registration-process,Registration-focused action keyword
+cheapest free zone in dubai,commercial,450,13.50,52,long-tail,blog/cheapest-free-zone-dubai,Price comparison - high commercial intent
+how to set up a company in dubai,informational,3200,6.20,68,phrase,blog/how-to-set-up-company-dubai,High volume informational - content marketing
+dubai mainland company,commercial,680,8.70,54,phrase,blog/dubai-mainland-company-guide,Mainland-specific service keyword
+free zone vs mainland dubai,informational,890,7.40,56,phrase,blog/free-zone-vs-mainland-dubai,Comparison content - high informational value
+dubai company formation services,commercial,720,10.80,55,phrase,/,Service provider research - commercial intent
+dubai trade license,commercial,640,9.50,53,phrase,blog/dubai-trade-license-guide,Trade license specific
+dubai visa requirements,informational,2100,5.90,61,phrase,blog/dubai-visa-requirements,High volume - visa information
+dubai company formation price,commercial,580,12.10,51,phrase,blog/dubai-company-formation-price,Price-focused commercial keyword
+best dubai company formation service,commercial,420,14.20,50,long-tail,/,Comparison research - high commercial intent
+dubai company setup cost,commercial,760,11.50,54,phrase,blog/dubai-company-setup-cost,Cost-focused commercial keyword
+dubai business setup,transactional,1400,8.30,59,exact,/,Alternative transactional phrase
+dubai company incorporation,transactional,520,10.20,52,phrase,blog/dubai-company-incorporation,Incorporation-specific action keyword
+how much does it cost to set up a company in dubai,commercial,380,13.80,49,long-tail,blog/dubai-company-formation-cost,Long-tail cost question - high intent
+dubai free zone license cost,commercial,340,12.60,48,long-tail,blog/dubai-free-zone-license-cost,Free zone cost-specific
+dubai mainland license,commercial,290,11.90,47,phrase,blog/dubai-mainland-license-guide,Mainland license specific
+dubai company formation process,informational,1120,6.80,58,phrase,blog/dubai-company-formation-process,Process-focused informational
+dubai company formation requirements,informational,980,7.10,57,phrase,blog/dubai-company-formation-requirements,Requirements-focused informational
+dubai company formation documents,informational,850,6.50,55,phrase,blog/dubai-company-formation-documents,Documentation guide
+dubai company formation timeline,informational,720,6.20,54,phrase,blog/dubai-company-formation-timeline,Timeline information
+dubai company formation fees,commercial,660,11.40,53,phrase,blog/dubai-company-formation-fees,Fee-focused commercial keyword
+dubai company formation package,commercial,540,12.70,51,long-tail,blog/dubai-company-formation-packages,Package-focused commercial keyword
+instant dubai company formation,transactional,480,13.20,50,long-tail,/,Urgency indicator - high transactional intent
+fast dubai company setup,transactional,420,12.90,49,long-tail,/,Speed-focused transactional keyword
+dubai company formation expert,commercial,380,11.60,48,long-tail,/,Expertise-focused commercial keyword
+dubai company formation consultant,commercial,340,11.20,47,long-tail,/,Consultant research - commercial intent
+dubai company formation online,transactional,460,10.80,50,long-tail,/,Online service - transactional intent
+dubai company formation 2024,informational,280,5.40,45,long-tail,blog/dubai-company-formation-2024,Year-specific informational
+dubai company formation guide,informational,1120,6.30,57,phrase,blog/dubai-company-formation-guide,Comprehensive guide keyword
+dubai company formation checklist,informational,640,6.10,53,phrase,blog/dubai-company-formation-checklist,Checklist content
+dubai company formation steps,informational,890,6.50,55,phrase,blog/dubai-company-formation-steps,Step-by-step guide
+dubai company formation benefits,informational,720,6.20,54,phrase,blog/dubai-company-formation-benefits,Benefits-focused content
+dubai company formation advantages,informational,580,6.00,52,phrase,blog/dubai-company-formation-advantages,Advantages content
+dubai company formation disadvantages,informational,460,5.80,50,phrase,blog/dubai-company-formation-disadvantages,Comparison content
+dubai company formation pros and cons,informational,380,5.60,48,long-tail,blog/dubai-company-formation-pros-cons,Comparison keyword
+dubai company formation vs uae company formation,informational,290,5.40,46,long-tail,blog/dubai-vs-uae-company-formation,Comparison content
+dubai company formation for foreigners,informational,1120,6.70,57,phrase,blog/dubai-company-formation-for-foreigners,Foreigner-specific guide
+dubai company formation for expats,informational,980,6.50,56,phrase,blog/dubai-company-formation-for-expats,Expat-specific content
+dubai company formation for investors,commercial,760,10.50,54,phrase,blog/dubai-company-formation-for-investors,Investor-focused commercial keyword
+dubai company formation for entrepreneurs,commercial,640,9.80,52,phrase,blog/dubai-company-formation-for-entrepreneurs,Entrepreneur-focused
+dubai company formation for startups,commercial,540,9.50,51,long-tail,blog/dubai-company-formation-for-startups,Startup-focused commercial keyword
+dubai company formation for ecommerce,commercial,420,10.20,49,long-tail,blog/dubai-company-formation-for-ecommerce,E-commerce specific
+dubai company formation for trading,commercial,380,9.90,48,long-tail,blog/dubai-company-formation-for-trading,Trading-specific commercial keyword
+dubai company formation for consulting,commercial,340,9.60,47,long-tail,blog/dubai-company-formation-for-consulting,Consulting-specific
+dubai company formation for real estate,commercial,320,10.10,46,long-tail,blog/dubai-company-formation-for-real-estate,Real estate specific
+dubai company formation for it companies,commercial,290,9.70,45,long-tail,blog/dubai-company-formation-for-it-companies,IT-specific commercial keyword
+dubai company formation for manufacturing,commercial,280,9.50,45,long-tail,blog/dubai-company-formation-for-manufacturing,Manufacturing-specific
+dubai company formation for services,commercial,260,9.30,44,long-tail,blog/dubai-company-formation-for-services,Services-specific
+dubai company formation for import export,commercial,240,9.80,43,long-tail,blog/dubai-company-formation-for-import-export,Import/export specific
+dubai company formation for freelancers,commercial,220,8.90,42,long-tail,blog/dubai-company-formation-for-freelancers,Freelancer-specific
+dubai company formation for digital nomads,commercial,200,8.70,41,long-tail,blog/dubai-company-formation-for-digital-nomads,Digital nomad specific
+dubai company formation for remote workers,commercial,180,8.50,40,long-tail,blog/dubai-company-formation-for-remote-workers,Remote worker specific
+dubai company formation for online business,commercial,160,9.20,39,long-tail,blog/dubai-company-formation-for-online-business,Online business specific
+dubai company formation for dropshipping,commercial,140,9.00,38,long-tail,blog/dubai-company-formation-for-dropshipping,Dropshipping specific
+dubai company formation for amazon sellers,commercial,120,9.50,37,long-tail,blog/dubai-company-formation-for-amazon-sellers,Amazon seller specific
+dubai company formation for shopify stores,commercial,110,9.30,36,long-tail,blog/dubai-company-formation-for-shopify-stores,Shopify specific
+dubai company formation for crypto businesses,commercial,100,10.20,35,long-tail,blog/dubai-company-formation-for-crypto-businesses,Crypto-specific commercial keyword
+dubai company formation for blockchain companies,commercial,90,10.00,34,long-tail,blog/dubai-company-formation-for-blockchain-companies,Blockchain-specific
+dubai company formation for fintech companies,commercial,85,10.50,33,long-tail,blog/dubai-company-formation-for-fintech-companies,Fintech-specific
+dubai company formation for saas companies,commercial,80,9.80,32,long-tail,blog/dubai-company-formation-for-saas-companies,SaaS-specific
+dubai company formation for app developers,commercial,75,9.60,31,long-tail,blog/dubai-company-formation-for-app-developers,App developer specific
+dubai company formation for web developers,commercial,70,9.40,30,long-tail,blog/dubai-company-formation-for-web-developers,Web developer specific
+dubai company formation for designers,commercial,65,9.20,30,long-tail,blog/dubai-company-formation-for-designers,Designer-specific
+dubai company formation for marketers,commercial,60,9.00,30,long-tail,blog/dubai-company-formation-for-marketers,Marketer-specific
+dubai company formation for coaches,commercial,55,8.80,30,long-tail,blog/dubai-company-formation-for-coaches,Coach-specific
+dubai company formation for consultants,commercial,50,8.60,30,long-tail,blog/dubai-company-formation-for-consultants,Consultant-specific
+dubai company formation for agencies,commercial,45,8.40,30,long-tail,blog/dubai-company-formation-for-agencies,Agency-specific
+dubai company formation for studios,commercial,40,8.20,30,long-tail,blog/dubai-company-formation-for-studios,Studio-specific
+dubai company formation for clinics,commercial,35,8.00,30,long-tail,blog/dubai-company-formation-for-clinics,Clinic-specific
+dubai company formation for salons,commercial,30,7.80,30,long-tail,blog/dubai-company-formation-for-salons,Salon-specific

@@ -1,3 +1,8 @@
+import { founderContent } from '@/content/founder'
+import { aboutContent } from '@/content/about'
+import Image from 'next/image'
+import Link from 'next/link'
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-pearl-white py-12">
@@ -9,8 +14,7 @@ export default function AboutPage() {
               About Valtora
             </h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Your trusted partner for Dubai company formation. We simplify the complex, 
-              provide transparent pricing, and deliver concierge-level service.
+              {aboutContent.tagline}
             </p>
           </div>
 
@@ -18,40 +22,101 @@ export default function AboutPage() {
           <section className="mb-12">
             <h2 className="font-serif text-3xl text-valtora-navy mb-6">Our Story</h2>
             <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
+              <p>{aboutContent.story}</p>
+              <p>{aboutContent.currentStatus}</p>
               <p>
-                Valtora Company Formations was founded with a simple mission: to make Dubai 
-                company formation accessible, transparent, and stress-free for entrepreneurs 
-                worldwide. We recognized that the process was often confusing, with hidden 
-                costs and unclear timelines.
-              </p>
-              <p>
-                Today, we're proud to be one of Dubai's most trusted company formation 
-                specialists, having helped hundreds of businesses establish their presence 
-                in the UAE. Our team combines deep local expertise with modern technology to 
-                deliver a seamless experience.
-              </p>
-              <p>
-                We're registered partners with leading UAE free zones including SPC, Meydan, 
-                IFZA, DMCC, RAKEZ, and more, giving you access to the best options for your 
-                business needs.
+                We're registered partners with leading UAE free zones including{' '}
+                {aboutContent.partners.slice(0, 5).join(', ')} and more, giving you access 
+                to the best options for your business needs.
               </p>
             </div>
           </section>
 
-          {/* Founder Section */}
+          {/* Founder's Note Section */}
           <section className="mb-12 p-8 bg-white rounded-lg shadow-lg border border-gray-200">
-            <h2 className="font-serif text-2xl text-valtora-navy mb-4">Founder's Background</h2>
-            <div className="text-gray-700 space-y-3">
-              <p>
-                Our founder brings over [X] years of experience in UAE corporate services, 
-                having worked with hundreds of companies across various industries. With 
-                deep knowledge of free zone regulations, mainland requirements, and visa 
-                processes, we ensure your company formation is handled with expertise and 
-                care.
+            <h2 className="font-serif text-3xl text-valtora-navy mb-6">Founder's Note</h2>
+            
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+              {/* Founder Portrait Placeholder */}
+              <div className="flex-shrink-0">
+                {founderContent.imageUrl ? (
+                  <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-lg overflow-hidden">
+                    <Image
+                      src={founderContent.imageUrl}
+                      alt={founderContent.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-48 h-48 md:w-56 md:h-56 rounded-lg bg-gradient-to-br from-valtora-navy to-carbon-black flex items-center justify-center">
+                    <div className="text-center text-pearl-white">
+                      <svg
+                        className="w-20 h-20 mx-auto mb-2 opacity-50"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                      <p className="text-sm opacity-75">Founder Portrait</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Founder Content */}
+              <div className="flex-1">
+                <div className="mb-4">
+                  <h3 className="font-serif text-2xl text-valtora-navy mb-1">
+                    {founderContent.name}
+                  </h3>
+                  <p className="text-sm text-gray-600">{founderContent.title}</p>
+                  {founderContent.yearsExperience && (
+                    <p className="text-sm text-gray-500 mt-1">
+                      {founderContent.yearsExperience}+ years of experience
+                    </p>
+                  )}
+                </div>
+
+                <div className="text-gray-700 space-y-4">
+                  <p className="leading-relaxed">{founderContent.background}</p>
+                  <p className="leading-relaxed">{founderContent.whyValtora}</p>
+                  <p className="leading-relaxed font-medium text-valtora-navy">
+                    {founderContent.commitment}
               </p>
-              <p>
-                [Additional founder background and credentials - to be customized]
-              </p>
+                </div>
+
+                {/* Credentials */}
+                {founderContent.credentials && founderContent.credentials.length > 0 && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Credentials:</p>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {founderContent.credentials.map((credential, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <svg
+                            className="w-4 h-4 text-emirati-gold mt-0.5 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <span>{credential}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </div>
           </section>
 
@@ -174,7 +239,7 @@ export default function AboutPage() {
               We're registered partners with leading UAE authorities and free zones:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {['SPC', 'Meydan', 'IFZA', 'DMCC', 'RAKEZ', 'Dubai Mainland', 'ADGM', 'DIFC'].map((partner) => (
+              {aboutContent.partners.map((partner) => (
                 <div key={partner} className="p-4 bg-white rounded-lg border border-gray-200 text-center">
                   <p className="font-semibold text-valtora-navy">{partner}</p>
                 </div>
@@ -188,12 +253,12 @@ export default function AboutPage() {
             <p className="text-gray-300 mb-6">
               Get an instant quote and see how we can help you establish your business in Dubai.
             </p>
-            <a
+            <Link
               href="/"
               className="btn-primary inline-block"
             >
               Get Your Instant Quote
-            </a>
+            </Link>
           </div>
         </div>
       </div>

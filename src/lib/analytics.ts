@@ -104,6 +104,37 @@ export function trackEvent(
 }
 
 /**
+ * Meta Pixel Event Helper
+ * Convenience functions for common Meta Pixel events
+ */
+export function trackMetaPixelEvent(eventName: string, eventData?: Record<string, any>) {
+  if (typeof window === 'undefined' || !window.fbq) return
+  window.fbq('track', eventName, eventData)
+}
+
+/**
+ * Track Lead event for Meta Pixel
+ */
+export function trackMetaPixelLead(source?: string) {
+  trackMetaPixelEvent('Lead', {
+    content_name: 'Company Formation Inquiry',
+    content_category: 'Lead Capture',
+    source: source || 'website',
+  })
+}
+
+/**
+ * Track CompleteRegistration event for Meta Pixel
+ */
+export function trackMetaPixelRegistration(enquiryId?: string) {
+  trackMetaPixelEvent('CompleteRegistration', {
+    content_name: 'Company Formation Registration',
+    status: true,
+    enquiry_id: enquiryId,
+  })
+}
+
+/**
  * Track calculator completion
  */
 export function trackCalculatorComplete(enquiryId: string) {

@@ -107,15 +107,112 @@
   
   /* Input style */
   .input-primary {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg;
+    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg;
+    @apply bg-white text-carbon-black font-medium;
     @apply focus:ring-2 focus:ring-emirati-gold focus:border-emirati-gold outline-none;
     @apply transition-all duration-200;
     @apply disabled:bg-gray-100 disabled:cursor-not-allowed;
+    @apply shadow-sm hover:shadow-md;
+  }
+  
+  /* Enhanced Select/Dropdown style - Fancy Dubai Style */
+  select.input-primary {
+    @apply appearance-none;
+    @apply border-2 border-gray-400;
+    @apply bg-white;
+    @apply font-semibold text-valtora-navy;
+    @apply cursor-pointer;
+    @apply hover:border-emirati-gold hover:shadow-lg hover:bg-gradient-to-b hover:from-white hover:to-emirati-gold/5;
+    @apply focus:border-emirati-gold focus:ring-2 focus:ring-emirati-gold focus:ring-opacity-50 focus:shadow-lg focus:shadow-emirati-gold/20;
+    @apply transition-all duration-300;
+    @apply min-h-[48px];
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23D4AF37' stroke='%23D4AF37' stroke-width='1.5' d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 3rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  select.input-primary:focus {
+    @apply border-emirati-gold;
+    @apply shadow-lg;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25), 0 0 0 2px rgba(212, 175, 55, 0.1);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23D4AF37' stroke='%23D4AF37' stroke-width='1.5' d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+  }
+  
+  select.input-primary option {
+    @apply bg-white text-valtora-navy;
+    @apply py-3;
+    @apply font-medium;
+  }
+  
+  select.input-primary option:hover {
+    @apply bg-emirati-gold/10;
   }
   
   /* Text balance for better readability */
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Enhanced article content spacing - matching reference design */
+  .prose p {
+    @apply mb-6;
+    @apply leading-relaxed;
+    @apply text-base;
+  }
+  
+  .prose h2 {
+    @apply mt-10 mb-6;
+    @apply leading-tight;
+  }
+  
+  .prose h3 {
+    @apply mt-8 mb-4;
+    @apply leading-snug;
+  }
+  
+  .prose h4 {
+    @apply mt-6 mb-3;
+    @apply leading-snug;
+  }
+  
+  .prose ul,
+  .prose ol {
+    @apply mb-6 mt-4;
+    @apply space-y-2;
+  }
+  
+  .prose li {
+    @apply leading-relaxed;
+    @apply mb-1;
+  }
+  
+  .prose > * + * {
+    @apply mt-0;
+  }
+  
+  .prose > p + p {
+    @apply mt-0;
+  }
+  
+  .prose > h2 + p,
+  .prose > h3 + p,
+  .prose > h4 + p {
+    @apply mt-0;
+  }
+  
+  /* Floating WhatsApp Button Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 

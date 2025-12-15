@@ -2,9 +2,10 @@
 
 import { useRef } from 'react'
 import WhatsAppLink from './WhatsAppLink'
+import LeadCaptureForm from './LeadCaptureForm'
 
 interface HeroProps {
-  onCalculateClick: () => void
+  onCalculateClick?: () => void
 }
 
 export default function Hero({ onCalculateClick }: HeroProps) {
@@ -16,68 +17,157 @@ export default function Hero({ onCalculateClick }: HeroProps) {
       {/* Optional: Add background image here */}
       {/* <div className="absolute inset-0 bg-[url('/dubai-skyline.jpg')] bg-cover bg-center opacity-20"></div> */}
       
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-balance">
-            Open Your Dubai Company in 60 Seconds —{' '}
-            <span className="text-emirati-gold block sm:inline">Transparent Free Zone & Mainland Pricing</span>
-          </h1>
-          
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
-            Get an instant cost breakdown including licences, visas, and government fees, with expert support from Dubai-based specialists.
-          </p>
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto">
+          {/* Mobile: Stacked Layout */}
+          <div className="lg:hidden">
+            {/* Headline */}
+            <div className="text-center mb-8">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight text-balance">
+                Open Your Dubai Company in 60 Seconds —{' '}
+                <span className="text-emirati-gold block sm:inline">Transparent Free Zone & Mainland Pricing</span>
+              </h1>
+              
+              <p className="text-base sm:text-lg text-gray-200 mb-6 max-w-2xl mx-auto leading-relaxed">
+                Get an instant cost breakdown including licences, visas, and government fees, with expert support from Dubai-based specialists.
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-stretch sm:items-center mb-10 sm:mb-12 px-2">
-            <button
-              onClick={onCalculateClick}
-              className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto"
-            >
-              Calculate My Cost
-            </button>
-            
-            <WhatsAppLink
-              href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
-              className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto text-center"
-              location="hero"
-            >
-              Talk to an Expert on WhatsApp
-            </WhatsAppLink>
+              {/* Trust Badges */}
+              <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs sm:text-sm mb-6">
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>No hidden fees</span>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Express service available</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span>4.9/5 Google Rating</span>
+                </div>
+              </div>
+
+              {/* Email Contact - Mobile */}
+              <div className="mb-6 text-center">
+                <a
+                  href="mailto:customer@valtoraformations.com"
+                  className="inline-flex items-center gap-3 text-pearl-white hover:text-emirati-gold transition-colors group"
+                  aria-label="Email us at customer@valtoraformations.com"
+                >
+                  <svg
+                    className="w-5 h-5 text-emirati-gold group-hover:scale-110 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span className="text-sm sm:text-base font-medium">customer@valtoraformations.com</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Form - Above the fold on mobile */}
+            <div className="mb-8">
+              <LeadCaptureForm variant="hero" />
+            </div>
+
           </div>
 
-          {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 text-xs sm:text-sm md:text-base px-4">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>No hidden fees</span>
-            </div>
-            
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Express service available</span>
+          {/* Desktop: Two-Column Layout */}
+          <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-12 items-start">
+            {/* Left Column: Hero Copy */}
+            <div className="flex flex-col justify-center">
+              <h1 className="font-serif text-5xl xl:text-6xl font-bold mb-6 leading-tight text-balance">
+                Open Your Dubai Company in 60 Seconds —{' '}
+                <span className="text-emirati-gold">Transparent Free Zone & Mainland Pricing</span>
+              </h1>
+              
+              <p className="text-lg xl:text-xl text-gray-200 mb-8 leading-relaxed">
+                Get an instant cost breakdown including licences, visas, and government fees, with expert support from Dubai-based specialists.
+              </p>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap items-center gap-6 text-sm mb-8">
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>No hidden fees</span>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Express service available</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span>4.9/5 Google Rating</span>
+                </div>
+              </div>
+
+              {/* Email Contact */}
+              <div className="mb-8">
+                <a
+                  href="mailto:customer@valtoraformations.com"
+                  className="inline-flex items-center gap-3 text-pearl-white hover:text-emirati-gold transition-colors group"
+                  aria-label="Email us at customer@valtoraformations.com"
+                >
+                  <svg
+                    className="w-5 h-5 text-emirati-gold group-hover:scale-110 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span className="text-base font-medium">customer@valtoraformations.com</span>
+                </a>
+              </div>
+
+              {/* Authority Logos - Placeholder */}
+              <div className="mt-8 pt-6 border-t border-gray-700">
+                <p className="text-xs text-gray-400 mb-3">Registered partners with leading UAE authorities:</p>
+                <div className="flex flex-wrap items-center gap-4 opacity-70 text-xs">
+                  <span>SPC</span>
+                  <span>Meydan</span>
+                  <span>IFZA</span>
+                  <span>DMCC</span>
+                  <span>RAKEZ</span>
+                  <span>Dubai Mainland</span>
+                </div>
+              </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-emirati-gold" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span>4.9/5 Google Rating</span>
-            </div>
-          </div>
-
-          {/* Authority Logos - Placeholder */}
-          <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-700">
-            <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4">Registered partners with leading UAE authorities:</p>
-            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 opacity-70 text-xs sm:text-sm">
-              <span className="text-sm">SPC</span>
-              <span className="text-sm">Meydan</span>
-              <span className="text-sm">IFZA</span>
-              <span className="text-sm">DMCC</span>
-              <span className="text-sm">RAKEZ</span>
-              <span className="text-sm">Dubai Mainland</span>
+            {/* Right Column: Form */}
+            <div className="sticky top-8">
+              <LeadCaptureForm variant="hero" />
             </div>
           </div>
         </div>
