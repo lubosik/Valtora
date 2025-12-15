@@ -59,9 +59,9 @@ export default function Hero({ onCalculateClick }: HeroProps) {
               {/* Email Contact - Mobile */}
               <div className="mb-6 text-center">
                 <a
-                  href="mailto:customer@valtoraformations.com"
+                  href="mailto:info@valtoraformations.com"
                   className="inline-flex items-center gap-3 text-pearl-white hover:text-emirati-gold transition-colors group"
-                  aria-label="Email us at customer@valtoraformations.com"
+                  aria-label="Email us at info@valtoraformations.com"
                 >
                   <svg
                     className="w-5 h-5 text-emirati-gold group-hover:scale-110 transition-transform"
@@ -77,7 +77,7 @@ export default function Hero({ onCalculateClick }: HeroProps) {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <span className="text-sm sm:text-base font-medium">customer@valtoraformations.com</span>
+                  <span className="text-sm sm:text-base font-medium">info@valtoraformations.com</span>
                 </a>
               </div>
             </div>
@@ -129,9 +129,9 @@ export default function Hero({ onCalculateClick }: HeroProps) {
               {/* Email Contact */}
               <div className="mb-8">
                 <a
-                  href="mailto:customer@valtoraformations.com"
+                  href="mailto:info@valtoraformations.com"
                   className="inline-flex items-center gap-3 text-pearl-white hover:text-emirati-gold transition-colors group"
-                  aria-label="Email us at customer@valtoraformations.com"
+                  aria-label="Email us at info@valtoraformations.com"
                 >
                   <svg
                     className="w-5 h-5 text-emirati-gold group-hover:scale-110 transition-transform"
@@ -147,7 +147,7 @@ export default function Hero({ onCalculateClick }: HeroProps) {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <span className="text-base font-medium">customer@valtoraformations.com</span>
+                  <span className="text-base font-medium">info@valtoraformations.com</span>
                 </a>
               </div>
 

@@ -9,7 +9,7 @@
  * - Popup form (exit intent/scroll-triggered)
  * - Inline CTA embeds (blog posts)
  * 
- * All submissions are configured to deliver to: customer@valtoraformations.com
+ * All submissions are configured to deliver to: info@valtoraformations.com
  * (Configured in Web3Forms dashboard, not in code)
  */
 

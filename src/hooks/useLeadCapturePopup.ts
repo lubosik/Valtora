@@ -15,9 +15,79 @@ const ALLOWED_PAGES = ['/', '/blog', '/blog/']
 export function useLeadCapturePopup() {
   const [showPopup, setShowPopup] = useState(false)
   const [hasShown, setHasShown] = useState(false)
+  const [isFormActive, setIsFormActive] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
+    // Check if user is interacting with any form
+    const checkFormActivity = () => {
+      const activeElement = document.activeElement
+      const isFormInput = activeElement && (
+        activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA' ||
+        activeElement.tagName === 'SELECT' ||
+        activeElement.closest('form') !== null
+      )
+      setIsFormActive(!!isFormInput)
+    }
+
+    // Check on focus/blur events
+    const handleFocus = () => {
+      const activeElement = document.activeElement
+      if (activeElement && (
+        activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA' ||
+        activeElement.tagName === 'SELECT'
+      )) {
+        setIsFormActive(true)
+      }
+    }
+
+    const handleBlur = () => {
+      // Small delay to check if focus moved to another form element
+      setTimeout(() => {
+        const activeElement = document.activeElement
+        if (!activeElement || (
+          activeElement.tagName !== 'INPUT' &&
+          activeElement.tagName !== 'TEXTAREA' &&
+          activeElement.tagName !== 'SELECT'
+        )) {
+          setIsFormActive(false)
+        }
+      }, 100)
+    }
+
+    // Check on any click (user might be clicking form elements)
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (target && (
+        target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.tagName === 'SELECT' ||
+        target.closest('form') !== null ||
+        target.closest('button[type="submit"]') !== null
+      )) {
+        setIsFormActive(true)
+      }
+    }
+
+    document.addEventListener('focusin', handleFocus)
+    document.addEventListener('focusout', handleBlur)
+    document.addEventListener('click', handleClick, true)
+
+    return () => {
+      document.removeEventListener('focusin', handleFocus)
+      document.removeEventListener('focusout', handleBlur)
+      document.removeEventListener('click', handleClick, true)
+    }
+  }, [])
+
+  useEffect(() => {
+    // Don't show popup if user is actively filling in a form
+    if (isFormActive) {
+      return
+    }
+
     // Check if current page allows popup
     const isAllowedPage = ALLOWED_PAGES.some(page => {
       if (page === '/') {
@@ -50,7 +120,7 @@ export function useLeadCapturePopup() {
 
     // Show after delay
     const delayTimer = setTimeout(() => {
-      if (!hasShown) {
+      if (!hasShown && !isFormActive) {
         setShowPopup(true)
         setHasShown(true)
       }
@@ -58,7 +128,7 @@ export function useLeadCapturePopup() {
 
     // Show on scroll
     const handleScroll = () => {
-      if (hasShown) return
+      if (hasShown || isFormActive) return
 
       const scrollPercentage =
         (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight
@@ -71,7 +141,7 @@ export function useLeadCapturePopup() {
 
     // Show on exit intent (desktop only)
     const handleMouseLeave = (e: MouseEvent) => {
-      if (hasShown) return
+      if (hasShown || isFormActive) return
       if (e.clientY <= 0 && window.innerWidth >= 768) {
         // Mouse leaving top of screen on desktop
         setShowPopup(true)
@@ -87,7 +157,7 @@ export function useLeadCapturePopup() {
       window.removeEventListener('scroll', handleScroll)
       document.removeEventListener('mouseleave', handleMouseLeave)
     }
-  }, [hasShown, pathname])
+  }, [hasShown, pathname, isFormActive])
 
   const handleClose = () => {
     setShowPopup(false)

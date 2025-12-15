@@ -105,11 +105,11 @@ export default function Footer() {
               </div>
               <div>
                 <a
-                  href="mailto:customer@valtoraformations.com"
+                  href="mailto:info@valtoraformations.com"
                   className="hover:text-emirati-gold transition-colors"
-                  aria-label="Email us at customer@valtoraformations.com"
+                  aria-label="Email us at info@valtoraformations.com"
                 >
-                  customer@valtoraformations.com
+                  info@valtoraformations.com
                 </a>
               </div>
               <div>
