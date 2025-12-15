@@ -10,7 +10,7 @@ interface HeroProps {
 
 export default function Hero({ onCalculateClick }: HeroProps) {
   return (
-    <section className="relative bg-valtora-navy text-pearl-white overflow-hidden">
+    <section id="hero-section" className="relative bg-valtora-navy text-pearl-white overflow-hidden">
       {/* Background overlay - can be replaced with actual image */}
       <div className="absolute inset-0 bg-gradient-to-br from-valtora-navy via-valtora-navy to-carbon-black opacity-90"></div>
       

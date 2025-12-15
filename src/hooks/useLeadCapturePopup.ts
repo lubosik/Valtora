@@ -16,6 +16,7 @@ export function useLeadCapturePopup() {
   const [showPopup, setShowPopup] = useState(false)
   const [hasShown, setHasShown] = useState(false)
   const [isFormActive, setIsFormActive] = useState(false)
+  const [hasScrolledPastHero, setHasScrolledPastHero] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -82,9 +83,69 @@ export function useLeadCapturePopup() {
     }
   }, [])
 
+  // Detect when user has scrolled past hero section
   useEffect(() => {
-    // Don't show popup if user is actively filling in a form
-    if (isFormActive) {
+    // Only check on homepage
+    if (pathname !== '/') {
+      setHasScrolledPastHero(true) // Allow popup on other pages
+      return
+    }
+
+    const heroSection = document.getElementById('hero-section')
+    if (!heroSection) {
+      // Hero section not found, allow popup after a delay
+      setTimeout(() => setHasScrolledPastHero(true), 2000)
+      return
+    }
+
+    // Use IntersectionObserver to detect when hero section is out of view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // If hero section is not intersecting (scrolled past), allow popup
+          if (!entry.isIntersecting) {
+            setHasScrolledPastHero(true)
+          } else {
+            // If hero is in view, don't allow popup
+            setHasScrolledPastHero(false)
+          }
+        })
+      },
+      {
+        // Trigger when hero section top passes viewport top
+        rootMargin: '0px',
+        threshold: 0,
+      }
+    )
+
+    observer.observe(heroSection)
+
+    // Also check scroll position as fallback
+    const checkScrollPosition = () => {
+      const heroRect = heroSection.getBoundingClientRect()
+      // If hero section bottom is above viewport top, user has scrolled past
+      if (heroRect.bottom < 0) {
+        setHasScrolledPastHero(true)
+      } else {
+        setHasScrolledPastHero(false)
+      }
+    }
+
+    // Check immediately and on scroll
+    checkScrollPosition()
+    window.addEventListener('scroll', checkScrollPosition, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', checkScrollPosition)
+    }
+  }, [pathname])
+
+  useEffect(() => {
+    // Don't show popup if:
+    // 1. User is actively filling in a form
+    // 2. User hasn't scrolled past hero section (on homepage)
+    if (isFormActive || !hasScrolledPastHero) {
       return
     }
 
@@ -113,22 +174,22 @@ export function useLeadCapturePopup() {
       }
     }
 
-    // Random delay between 6-10 seconds
+    // Random delay between 6-10 seconds (only after scrolling past hero)
     const randomDelay = Math.floor(
       Math.random() * (DELAY_BEFORE_SHOW_MAX - DELAY_BEFORE_SHOW_MIN + 1) + DELAY_BEFORE_SHOW_MIN
     )
 
-    // Show after delay
+    // Show after delay (only if past hero and not filling form)
     const delayTimer = setTimeout(() => {
-      if (!hasShown && !isFormActive) {
+      if (!hasShown && !isFormActive && hasScrolledPastHero) {
         setShowPopup(true)
         setHasShown(true)
       }
     }, randomDelay)
 
-    // Show on scroll
+    // Show on scroll (only after past hero)
     const handleScroll = () => {
-      if (hasShown || isFormActive) return
+      if (hasShown || isFormActive || !hasScrolledPastHero) return
 
       const scrollPercentage =
         (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight
@@ -139,9 +200,9 @@ export function useLeadCapturePopup() {
       }
     }
 
-    // Show on exit intent (desktop only)
+    // Show on exit intent (desktop only, only after past hero)
     const handleMouseLeave = (e: MouseEvent) => {
-      if (hasShown || isFormActive) return
+      if (hasShown || isFormActive || !hasScrolledPastHero) return
       if (e.clientY <= 0 && window.innerWidth >= 768) {
         // Mouse leaving top of screen on desktop
         setShowPopup(true)
@@ -157,7 +218,7 @@ export function useLeadCapturePopup() {
       window.removeEventListener('scroll', handleScroll)
       document.removeEventListener('mouseleave', handleMouseLeave)
     }
-  }, [hasShown, pathname, isFormActive])
+  }, [hasShown, pathname, isFormActive, hasScrolledPastHero])
 
   const handleClose = () => {
     setShowPopup(false)
