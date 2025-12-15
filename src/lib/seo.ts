@@ -240,3 +240,96 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
   }
 }
 
+/**
+ * Generate JSON-LD structured data for BlogPosting
+ */
+export function generateBlogPostingSchema(post: {
+  title: string
+  description: string
+  slug: string
+  publishedDate: string
+  updatedDate?: string
+  author: string
+  image?: string
+  category: string
+  tags: string[]
+}) {
+  const postUrl = `${siteUrl}/blog/${post.slug}`
+  const imageUrl = post.image ? (post.image.startsWith('http') ? post.image : `${siteUrl}${post.image}`) : `${siteUrl}/og-image.jpg`
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    image: imageUrl,
+    datePublished: post.publishedDate,
+    dateModified: post.updatedDate || post.publishedDate,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/valtora-logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
+    articleSection: post.category,
+    keywords: post.tags.join(', '),
+    url: postUrl,
+  }
+}
+
+/**
+ * Generate JSON-LD structured data for NewsArticle (optional, for news-style posts)
+ * Use this only for time-sensitive news content, not regular blog posts
+ */
+export function generateNewsArticleSchema(post: {
+  title: string
+  description: string
+  slug: string
+  publishedDate: string
+  updatedDate?: string
+  author: string
+  image?: string
+  category: string
+}) {
+  const postUrl = `${siteUrl}/blog/${post.slug}`
+  const imageUrl = post.image ? (post.image.startsWith('http') ? post.image : `${siteUrl}${post.image}`) : `${siteUrl}/og-image.jpg`
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: post.title,
+    description: post.description,
+    image: imageUrl,
+    datePublished: post.publishedDate,
+    dateModified: post.updatedDate || post.publishedDate,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/valtora-logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
+    articleSection: post.category,
+    url: postUrl,
+  }
+}
+

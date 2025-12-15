@@ -11,6 +11,12 @@ const nextConfig = {
       },
     ],
   },
+  // Bind to localhost only to avoid permission issues
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+  },
 }
 
 module.exports = nextConfig

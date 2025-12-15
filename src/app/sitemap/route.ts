@@ -1,60 +1,57 @@
 import { NextResponse } from 'next/server'
+import { getAllPosts } from '@/lib/blog'
 
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://valtora.com'
   const currentDate = new Date().toISOString()
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  // Get all blog posts
+  const blogPosts = getAllPosts()
+
+  // Core pages
+  const corePages = [
+    { url: '', changefreq: 'weekly', priority: '1.0' },
+    { url: '/quote', changefreq: 'monthly', priority: '0.8' },
+    { url: '/faq', changefreq: 'monthly', priority: '0.8' },
+    { url: '/about', changefreq: 'monthly', priority: '0.7' },
+    { url: '/blog', changefreq: 'weekly', priority: '0.8' },
+    { url: '/case-studies', changefreq: 'monthly', priority: '0.7' },
+    { url: '/legal/terms', changefreq: 'yearly', priority: '0.3' },
+    { url: '/legal/privacy', changefreq: 'yearly', priority: '0.3' },
+    { url: '/legal/refund', changefreq: 'yearly', priority: '0.3' },
+  ]
+
+  // Build sitemap XML
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${baseUrl}</loc>
+`
+
+  // Add core pages
+  for (const page of corePages) {
+    sitemap += `  <url>
+    <loc>${baseUrl}${page.url}</loc>
     <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
   </url>
-  <url>
-    <loc>${baseUrl}/quote</loc>
-    <lastmod>${currentDate}</lastmod>
+`
+  }
+
+  // Add blog posts
+  for (const post of blogPosts) {
+    const lastmod = post.updatedDate || post.publishedDate
+    const lastmodDate = new Date(lastmod).toISOString()
+    
+    sitemap += `  <url>
+    <loc>${baseUrl}/blog/${post.slug}</loc>
+    <lastmod>${lastmodDate}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>${baseUrl}/faq</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-    <url>
-      <loc>${baseUrl}/about</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-    <url>
-      <loc>${baseUrl}/blog</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  <url>
-    <loc>${baseUrl}/legal/terms</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>${baseUrl}/legal/privacy</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>${baseUrl}/legal/refund</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-</urlset>`
+`
+  }
+
+  sitemap += `</urlset>`
 
   return new NextResponse(sitemap, {
     headers: {

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "keyword-research": "tsx scripts/keyword-research-dataforseo.ts"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^2.9.0",
