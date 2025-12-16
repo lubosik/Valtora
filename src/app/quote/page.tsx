@@ -311,7 +311,7 @@ function QuotePageContent() {
                   </button>
                   
                   <a
-                    href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20my%20quote%20for%20company%20formation."
+                    href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20my%20quote%20for%20company%20formation."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700"

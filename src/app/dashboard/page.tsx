@@ -288,7 +288,7 @@ function DashboardPageContent() {
               <p className="text-xs text-gray-500 mt-4 text-center">
                 Don't have your enquiry ID?{' '}
                 <a
-                  href="https://wa.me/447393961000"
+                  href="https://wa.me/18125513945"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-oasis-blue hover:underline"
@@ -317,7 +317,7 @@ function DashboardPageContent() {
                 </p>
               </div>
               <a
-                href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%20have%20a%20question%20about%20my%20application."
+                href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%20have%20a%20question%20about%20my%20application."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
@@ -496,7 +496,7 @@ function DashboardPageContent() {
                 <h2 className="font-serif text-2xl text-valtora-navy mb-4">Quick Actions</h2>
                 <div className="space-y-3">
                   <a
-                    href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%20have%20a%20question%20about%20my%20application."
+                    href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%20have%20a%20question%20about%20my%20application."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700"
@@ -527,14 +527,14 @@ function DashboardPageContent() {
                 <div className="space-y-2 text-sm text-gray-700">
                   <p>
                     <strong>Phone:</strong>{' '}
-                    <a href="tel:+447393961000" className="text-oasis-blue hover:underline">
-                      +44 739 396 1000
+                    <a href="tel:+18125513945" className="text-oasis-blue hover:underline">
+                      +1 812 551 3945
                     </a>
                   </p>
                   <p>
                     <strong>WhatsApp:</strong>{' '}
                     <a
-                      href="https://wa.me/447393961000"
+                      href="https://wa.me/18125513945"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-oasis-blue hover:underline"

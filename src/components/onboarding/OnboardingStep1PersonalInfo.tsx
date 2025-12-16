@@ -72,7 +72,7 @@ export default function OnboardingStep1PersonalInfo({
             value={data.phone}
             onChange={(e) => updateData({ phone: e.target.value })}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emirati-gold focus:border-emirati-gold outline-none"
-            placeholder="+44 739 396 1000"
+            placeholder="+1 812 551 3945"
             required
           />
           <p className="text-xs text-gray-500 mt-1">

@@ -48,7 +48,7 @@ export default function Header() {
             About
           </Link>
           <WhatsAppLink
-            href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
+            href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
             className="btn-primary text-sm px-4 py-2"
             location="header"
           >
@@ -132,7 +132,7 @@ export default function Header() {
             </Link>
             <div className="pt-2">
               <WhatsAppLink
-                href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
+                href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
                 className="btn-primary w-full text-center"
                 location="header_mobile"
                 onClick={() => setMobileMenuOpen(false)}

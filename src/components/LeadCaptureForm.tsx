@@ -391,7 +391,7 @@ export default function LeadCaptureForm({
             We'll reply within 1 business hour with personalized setup options.
           </p>
           <WhatsAppLink
-            href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
+            href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
             className="btn-primary inline-block px-6 py-3"
             location={`form_success_${variant}`}
           >
@@ -645,7 +645,7 @@ export default function LeadCaptureForm({
             {error}
             <div className="mt-2">
               <WhatsAppLink
-                href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
+                href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
                 className="text-sm underline hover:no-underline"
                 location={`form_error_${variant}`}
               >

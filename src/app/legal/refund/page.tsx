@@ -91,9 +91,9 @@ export default function RefundPage() {
                 Dubai Office – Unit No: RET-R5-185<br />
                 Jumeirah Lakes Towers<br />
                 Dubai, United Arab Emirates<br />
-                Phone: +44 739 396 1000<br />
+                Phone: +1 812 551 3945<br />
                 Email: [Contact email to be added]<br />
-                WhatsApp: <a href="https://wa.me/447393961000" className="text-oasis-blue hover:underline">+44 739 396 1000</a>
+                WhatsApp: <a href="https://wa.me/18125513945" className="text-oasis-blue hover:underline">+1 812 551 3945</a>
               </p>
               <p className="mt-4">
                 Please include your enquiry ID, payment reference, and reason for refund 

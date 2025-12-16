@@ -214,7 +214,7 @@ export default function FAQPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%20have%20a%20question%20about%20company%20formation."
+                  href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%20have%20a%20question%20about%20company%20formation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
@@ -222,7 +222,7 @@ export default function FAQPage() {
                   Chat on WhatsApp
                 </a>
                 <a
-                  href="tel:+447393961000"
+                  href="tel:+18125513945"
                   className="btn-secondary"
                 >
                   Call Us

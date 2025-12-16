@@ -97,10 +97,10 @@ export default function Footer() {
               </div>
               <div>
                 <a
-                  href="tel:+447393961000"
+                  href="tel:+18125513945"
                   className="hover:text-emirati-gold transition-colors"
                 >
-                  +44 739 396 1000
+                  +1 812 551 3945
                 </a>
               </div>
               <div>
@@ -114,7 +114,7 @@ export default function Footer() {
               </div>
               <div>
                 <WhatsAppLink
-                  href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
+                  href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%27d%20like%20to%20discuss%20company%20formation%20in%20Dubai."
                   className="hover:text-emirati-gold transition-colors inline-flex items-center gap-2"
                   location="footer"
                 >

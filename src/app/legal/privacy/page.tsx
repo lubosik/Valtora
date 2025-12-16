@@ -110,7 +110,7 @@ export default function PrivacyPage() {
                 Dubai Office – Unit No: RET-R5-185<br />
                 Jumeirah Lakes Towers<br />
                 Dubai, United Arab Emirates<br />
-                Phone: +44 739 396 1000<br />
+                Phone: +1 812 551 3945<br />
                 Email: [Contact email to be added]
               </p>
             </section>

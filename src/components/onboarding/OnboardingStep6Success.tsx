@@ -104,7 +104,7 @@ export default function OnboardingStep6Success({ enquiryId }: OnboardingStep6Suc
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="https://wa.me/447393961000?text=Hi%20Valtora%2C%20I%20just%20completed%20my%20onboarding%20and%20would%20like%20to%20discuss%20next%20steps."
+            href="https://wa.me/18125513945?text=Hi%20Valtora%2C%20I%20just%20completed%20my%20onboarding%20and%20would%20like%20to%20discuss%20next%20steps."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary flex-1 text-center"
